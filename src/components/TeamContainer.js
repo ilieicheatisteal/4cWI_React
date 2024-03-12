@@ -26,9 +26,7 @@ export default function TeamContainer() {
        
     <div className="trendyol"></div>
     </div>
-    <div className="bg-red-500 h-20 w-full text-2xl items-center flex font-extrabold justify-center text-white outline-black outline-1">
-    <img src="bundesliga.jpg" className="h-20 w-30"/>
-      Bundesliga 2024</div>
+    
     <div className="flex justify-end mr-10 text-xl font-bold ">
     <div className="ml-2">M</div>
     <div className="ml-20">W</div>
