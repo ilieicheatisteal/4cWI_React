@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import PeopleContainer from "./components/PeopleContainer";
+import TeamContainer from "./components/TeamContainer";
 
 function App() {
   return (
     <div className="">
-      <PeopleContainer />
+      <TeamContainer />
     </div>
   );
 }
