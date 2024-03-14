@@ -1,22 +1,31 @@
 import React from "react";
 
-export default function Card({ name, points, icon, won, lost, goalDiff, draw,matches}) {
+export default function Card({
+  name,
+  points,
+  icon,
+  won,
+  lost,
+  goalDiff,
+  draw,
+  matches,
+}) {
   return (
-    <div className="border-8 h-20 flex justify-around items-center w-full p-8 border-red-600 rounded-2xl mb-5">
-      <div className="w-full grid grid-cols-[50px_90%] justify-around">
+    <div className="">
+      <div className="grid grid-cols-[50px_auto_40px_40px_40px_40px_40px_40px_40px] gap-4  w-full">
         <img src={icon} alt="" className="h-10 w-10" />
         <h2 className="font-bold text-xl">{name}</h2>
-      </div>
-      <div className="font-semibold text-xl ">
-        <div className="flex">
-        <div className="ml-20">{matches}</div>
-        <div className="ml-20">{won}</div>
-        <div className="ml-20">{lost}</div>
-          <div className="ml-20">{draw}</div>
-          <div className="ml-20">{goalDiff}</div>
-          <div className="ml-20">{points}</div>
-          <div className="ml-1">P</div>
+
+        <div className="invisible md:visible ml-20">{matches}</div>
+        <div className="invisible md:visible ml-20">{won}</div>
+        <div className="invisible md:visible ml-20">{lost}</div>
+        <div className="invisible md:visible ml-20">{draw}</div>
+        <div className="invisible md:visible ml-20">{goalDiff}</div>
+        <div className="ml-20 flex gap-2">
+          <div>{points}</div>
+          <div>P</div>
         </div>
+       
       </div>
     </div>
   );

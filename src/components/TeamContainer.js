@@ -1,17 +1,15 @@
-import React, { useEffect, useState, } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
 export default function TeamContainer() {
   const [team, setteam] = useState([]);
   const [filteredTeam, setFilteredTeam] = useState([]);
 
-
   useEffect(() => {
     fetch("https://api.openligadb.de/getbltable/bl1/2023").then((res) =>
       res.json().then((data) => {
         setteam(data);
         setFilteredTeam(data);
-
       })
     );
   }, []);
@@ -22,20 +20,15 @@ export default function TeamContainer() {
 
   return (
     <div>
-   <div className="headerr">
-       
-    <div className="trendyol"></div>
-    </div>
-    
-    <div className="flex justify-end mr-10 text-xl font-bold ">
-    <div className="ml-2">M</div>
-    <div className="ml-20">W</div>
-    <div className="ml-20">L</div>
-    <div className="ml-20">D</div>
-    <div className="ml-20">GD</div>
-    <div className="ml-20">PT</div>
-    <div className="ml-10"></div>
-    </div>
+      <div className="flex justify-end mr-10 text-xl font-bold ">
+        <div className="ml-2">M</div>
+        <div className="ml-20">W</div>
+        <div className="ml-20">L</div>
+        <div className="ml-20">D</div>
+        <div className="ml-20">GD</div>
+        <div className="ml-20">PT</div>
+        <div className="ml-10"></div>
+      </div>
       <div className=" gap-4 p-8 pt-30">
         {team.map((person) => {
           return (
